@@ -1,6 +1,6 @@
-(defproject com.taoensso/timbre "4.3.0-RC1"
+(defproject irresponsible/timbre "0.0.1"
   :author "Peter Taoussanis <https://www.taoensso.com>"
-  :description "Pure Clojure/Script logging library"
+  :description "Fork of timbre for modern clojure"
   :url "https://github.com/ptaoussanis/timbre"
   :license {:name "Eclipse Public License"
             :url  "http://www.eclipse.org/legal/epl-v10.html"
@@ -11,7 +11,7 @@
                 *assert*             true}
 
   :dependencies
-  [[org.clojure/clojure "1.5.1"]
+  [[org.clojure/clojure "1.7.0" :scope "provided"]
    [com.taoensso/encore "2.33.0"]
    [io.aviso/pretty     "0.1.21"]]
 
@@ -24,7 +24,7 @@
   {;; :default [:base :system :user :provided :dev]
    :server-jvm {:jvm-opts ^:replace ["-server"]}
    :1.7  {:dependencies [[org.clojure/clojure "1.7.0"]]}
-   :1.8  {:dependencies [[org.clojure/clojure "1.8.0-RC5"]]}
+   :1.8  {:dependencies [[org.clojure/clojure "1.8.0"]]}
    :test {:dependencies [[org.clojure/tools.logging "0.3.1"]
 
                          ;; Appender deps
@@ -35,7 +35,7 @@
                          [org.graylog2/gelfclient "1.3.1"]]}
    :dev
    [:1.7 :test
-    {:dependencies [[org.clojure/clojurescript "1.7.28"]]
+    {:dependencies [[org.clojure/clojurescript "1.7.228"]]
      :plugins
      [;; These must be in :dev, Ref. https://github.com/lynaghk/cljx/issues/47:
       [lein-cljsbuild      "1.1.2"]]}]}
